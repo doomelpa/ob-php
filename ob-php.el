@@ -30,8 +30,8 @@
 ;;;###autoload
 (defun org-babel-execute:php (body params)
   "org-babel PHP hook."
-  ;; todo
-  (let* ((cmd (mapconcat 'identity (list "php") " -r ")))
+  ;; FIXME command `php' options: "-r " cause eval issue.
+  (let* ((cmd (mapconcat 'identity (list "php") " ")))
     (org-babel-eval cmd body)
     ))
 
