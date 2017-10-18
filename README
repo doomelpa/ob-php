@@ -6,15 +6,11 @@ Use MELPA to install `ob-php`.
 Usage
 =====
 
-Because the option `-r` caused ob-php evaluation issue. So I disable it for now.
-
-You must include `<? ... ?>` in src block now. Like this:
+You don't need to include `<? ... ?>` in src block now. Like this:
 
 ```org
 #+BEGIN_SRC php
-<?php
 echo "Hello, World!\n";
-?>
 #+END_SRC
 
 #+RESULTS:

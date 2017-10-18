@@ -21,7 +21,6 @@
   "org-mode blocks for PHP."
   :group 'org)
 
-;; todo
 (defcustom ob-php:inf-php-buffer "*php*"
   "Default PHP inferior buffer."
   :group 'ob-php
@@ -29,15 +28,20 @@
 
 ;;;###autoload
 (defun org-babel-execute:php (body params)
-  "org-babel PHP hook."
-  ;; FIXME command `php' options: "-r " cause eval issue.
-  (let* ((cmd (mapconcat 'identity (list "php") " ")))
+  "Orgmode Babel PHP evaluate function for `BODY' with `PARAMS'."
+  (let* ((cmd "php")
+         (body (concat "<?php\n" body "\n?>")))
     (org-babel-eval cmd body)
     ))
 
 ;;;###autoload
 (eval-after-load "org"
   '(add-to-list 'org-src-lang-modes '("php" . php)))
+
+(defvar org-babel-default-header-args:php '())
+
+(add-to-list 'org-babel-default-header-args:php
+             '(:results . "output"))
 
 (provide 'ob-php)
 
