@@ -40,7 +40,9 @@
 (defun org-babel-execute:php (body params)
   "Orgmode Babel PHP evaluate function for `BODY' with `PARAMS'."
   (let* ((cmd (concat org-babel-php-command " " org-babel-php-command-options))
-         (body (concat "<?php\n" body "\n?>")))
+         (code (if (string-match-p "<\\?\\(?:php\\|=\\)\\_>" body)
+                   body
+                 (concat "<?php\n\n" body))))
     (org-babel-eval cmd body)))
 
 ;;;###autoload
