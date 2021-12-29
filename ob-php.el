@@ -43,7 +43,7 @@
          (code (if (string-match-p "<\\?\\(?:php\\|=\\)\\_>" body)
                    body
                  (concat "<?php\n\n" body))))
-    (org-babel-eval cmd body)))
+    (org-babel-eval cmd code)))
 
 ;;;###autoload
 (eval-after-load 'org
