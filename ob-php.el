@@ -1,10 +1,10 @@
-;;; ob-php.el --- Execute PHP within org-mode blocks.
+;;; ob-php.el --- Execute PHP within org-mode source blocks.
 ;; Copyright 2016 stardiviner
 
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: org babel php
-;; URL: https://github.com/stardiviner/ob-php
+;; URL: https://repo.or.cz/ob-php.git
 ;; Created: 04th May 2016
 ;; Version: 0.0.1
 ;; Package-Requires: ((org "8"))
