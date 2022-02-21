@@ -14,7 +14,6 @@
 ;; Execute PHP within org-mode blocks.
 
 ;;; Code:
-(require 'org)
 (require 'ob)
 
 (defgroup ob-php nil
